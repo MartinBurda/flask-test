@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="047edfcf-e4fb-4be2-9606-f3245f2bb038" name="Changes" comment="nové soubory (abc, alfa, azb, heb.html)">
+    <list default="true" id="047edfcf-e4fb-4be2-9606-f3245f2bb038" name="Changes" comment="funkční hlavička (jenom na indexu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/about.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/template.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/heb.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/heb.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
@@ -103,7 +101,7 @@
       <workItem from="1738584355779" duration="81000" />
       <workItem from="1738584457875" duration="5232000" />
       <workItem from="1739173942855" duration="4283000" />
-      <workItem from="1739189059883" duration="4012000" />
+      <workItem from="1739189059883" duration="4916000" />
     </task>
     <task id="LOCAL-00001" summary="main.py">
       <option name="closed" value="true" />
@@ -161,7 +159,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739191174149</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="funkční hlavička (jenom na indexu">
+      <option name="closed" value="true" />
+      <created>1739193392617</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1739193392617</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,9 +198,10 @@
     <MESSAGE value="pridavani html a css souboru" />
     <MESSAGE value="nova branče" />
     <MESSAGE value="nové soubory (abc, alfa, azb, heb.html)" />
-    <option name="LAST_COMMIT_MESSAGE" value="nové soubory (abc, alfa, azb, heb.html)" />
+    <MESSAGE value="funkční hlavička (jenom na indexu" />
+    <option name="LAST_COMMIT_MESSAGE" value="funkční hlavička (jenom na indexu" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/PythonProject$main.coverage" NAME="main Coverage Results" MODIFIED="1739193210810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PythonProject$main.coverage" NAME="main Coverage Results" MODIFIED="1739194194308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

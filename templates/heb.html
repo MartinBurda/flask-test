@@ -1,21 +1,13 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
-</head>
-<body>
-<header>
-    <h1>Flask projekt</h1>
-    <nav>
-        <ul>
-            <li>Abecedy</li>
-            <li></li>
-            <li></li>
-        </ul>
-    </nav>
-</header>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block title %}
+ABC
+{% endblock %}
+
+{% block content %}
+
+<p>Tady je hebrejská abeceda:</p>
+
+<p>א ב ג ד ה ו ז ח ט י כ ל מ נ ס ע פ צ ק ר ש ת</p>
+
+{% endblock %}
