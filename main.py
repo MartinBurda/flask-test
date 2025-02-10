@@ -8,19 +8,19 @@ def index():
     return render_template('index.html')
 
 @app.route('/abc')
-def about():
+def abc():
     return render_template('abc.html')
 
 @app.route('/alfa')
-def about():
+def alfa():
     return render_template('alfa.html')
 
 @app.route('/azb')
-def about():
+def azb():
     return render_template('azb.html')
 
 @app.route('/heb')
-def about():
+def heb():
     return render_template('heb.html')
 
 

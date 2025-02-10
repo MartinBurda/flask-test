@@ -1,17 +1,13 @@
-<!doctype html>
-<html lang="cz">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type='text/css' href="static/css/style.css">
-    <title>Hello World</title>
-</head>
-<body>
-    <div class="container">
-        <h1>Hello World</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula, orci non gravida viverra, justo purus tincidunt augue, nec scelerisque quam purus vel neque.</p>
-    </div>
-<p><a href="{{ url_for('about') }}">About</a></p>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block title %}
+ABC
+{% endblock %}
+
+{% block content %}
+
+
+<p><a href="{{ url_for('abc') }}">About</a></p>
+
+{% endblock %}
+

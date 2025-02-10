@@ -11,12 +11,17 @@
     <h1>Flask projekt</h1>
     <nav>
         <ul>
-            <li><a></a></li>
-            <li><a></a></li>
-            <li><a></a></li>
+            <li><a href="{{ url_for('abc') }}">Abeceda</a></li>
+            <li><a href="{{ url_for('alfa') }}">Alfabeta</a></li>
+            <li><a href="{{ url_for('azb') }}">Azbuka</a></li>
+            <li><a href="{{ url_for('heb') }}">Hebrejština</a></li>
+
         </ul>
     </nav>
 </header>
+
+{% block content %}
+{% endblock %}
 
 </body>
 </html>
