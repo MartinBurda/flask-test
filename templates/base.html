@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+    {% block css %}
+    {% endblock %}
     <title>Document</title>
 </head>
 <body>
@@ -13,9 +15,6 @@
         <ul>
             <li><a href="{{ url_for('index') }}">Domů</a></li>
             <li><a href="{{ url_for('abc') }}">Abeceda</a></li>
-            <li><a href="{{ url_for('alfa') }}">Alfabeta</a></li>
-            <li><a href="{{ url_for('azb') }}">Azbuka</a></li>
-            <li><a href="{{ url_for('heb') }}">Hebrejština</a></li>
             <li><a href="{{ url_for('link') }}">Formulář</a></li>
 
         </ul>
