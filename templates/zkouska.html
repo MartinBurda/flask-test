@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>
+    {% block title %}
+    zkouska
+    {% endblock %}
+</h2>
+
+<main>
+
+    {% if radio %}
+    <p>Vybrany programovaci jazyk {{ radio }}</p>
+    {% endif %}
+
+    {% if username=="pokuston" and password == "heslo" %}
+    <h3>Uspesne prihlaseni uzivatele {{ username }}</h3>
+    {% elif username == "pokuston" %}
+    <h3>Spatne heslo</h3>
+    {% else%}
+    <h3>Neplatny uzivatel</h3>
+    {% endif %}
+</main>
+
+{% endblock %}

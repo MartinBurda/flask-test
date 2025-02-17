@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -23,7 +23,14 @@ def azb():
 def heb():
     return render_template('heb.html')
 
-
+@app.route('/odkaz', methods=['GET', 'POST'])
+def link():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        radio = request.form['radio']
+        return render_template("zkouska.html", username=username, password=password, radio=radio)
+    return render_template('link.html')
 
 @app.route('/nasobek/<n1>/<n2>')
 def hello(n1, n2):
