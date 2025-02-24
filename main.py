@@ -1,7 +1,8 @@
-from flask import Flask, render_template, request
+import flask
+from flask import Flask, render_template, request, flash, redirect, url_for
 
 app = Flask(__name__)
-
+app.config['SECRET_KEY'] = 'dev'
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -28,7 +29,13 @@ def link():
         username = request.form['username']
         password = request.form['password']
         radio = request.form['radio']
-        return render_template("zkouska.html", username=username, password=password, radio=radio)
+
+        if username == 'admin' and password == 'password':
+            flash("login successfully")
+            return redirect(url_for('index'))
+
+        flash("login failed", category="error")
+
     return render_template('link.html')
 
 @app.route('/nasobek/<n1>/<n2>')
@@ -44,4 +51,4 @@ def hello(n1, n2):
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
