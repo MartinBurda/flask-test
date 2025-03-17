@@ -1,54 +1,13 @@
-import flask
-from flask import Flask, render_template, request, flash, redirect, url_for
+from flask import render_template, request, flash, redirect, url_for
+from app import app, login, db
+from app.db import create_db
+from os import path
 
-app = Flask(__name__)
-app.config['SECRET_KEY'] = 'dev'
-@app.route('/')
-def index():
-    return render_template('index.html')
-
-@app.route('/abc')
-def abc():
-    return render_template('abc.html')
-
-@app.route('/alfa')
-def alfa():
-    return render_template('alfa.html')
-
-@app.route('/azb')
-def azb():
-    return render_template('azb.html')
-
-@app.route('/heb')
-def heb():
-    return render_template('heb.html')
-
-@app.route('/odkaz', methods=['GET', 'POST'])
-def link():
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-        radio = request.form['radio']
-
-        if username == 'admin' and password == 'password':
-            flash("login successfully")
-            return redirect(url_for('index'))
-
-        flash("login failed", category="error")
-
-    return render_template('link.html')
-
-@app.route('/nasobek/<n1>/<n2>')
-def hello(n1, n2):
-    try:
-        n1 = int(n1)
-        n2 = int(n2)
-    except ValueError:
-        return '<h1>špatná čísla</h1>'
-
-    n3 = n1 * n2
-    return f'<h1>Násobek je: {n3}</h1>'
-
+app.register_blueprint(login.bp)
 
 if __name__ == '__main__':
+    print(app.config["DATABASE"])
+    if not path.exists(app.config["DATABASE"]):
+        create_db()
+    print("inicializace databaze")
     app.run(debug=True)
