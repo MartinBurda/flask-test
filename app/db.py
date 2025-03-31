@@ -2,6 +2,9 @@ import sqlite3
 
 DB_PATH = "database.sqlite"
 
+"""
+spojení
+"""
 def connect_db(db_path=DB_PATH):
     try:
         conn = sqlite3.connect(db_path)
@@ -10,6 +13,9 @@ def connect_db(db_path=DB_PATH):
         print(f"Error connecting to database: {e}")
         return None
 
+"""
+vytvoření
+"""
 def create_db():
     conn = connect_db()
     if conn:
@@ -23,6 +29,10 @@ def create_db():
         finally:
             conn.close()
 
+
+"""
+execute
+"""
 def db_execute(command, params=None, path=DB_PATH):
     conn = connect_db(path)
     if conn:
